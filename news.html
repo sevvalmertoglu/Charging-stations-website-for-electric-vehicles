@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     
     <link rel="stylesheet" href="StyleNews.css">
     <title>Haber Sayfası</title>
@@ -14,18 +14,19 @@
     body {
       
       font-family: Arial, Helvetica, sans-serif;
-      font-family: 'Times', sans-serif;
+      
     }
     
     
     .topnav {
+      
+      position: sticky;
       overflow: hidden;
       background:  rgba(61,109,156,0.9780287114845938);
       color: #d69d34;  
       position: fixed;  
       z-index: 1000;  
       width: 100%;
-      
       
     }
     
@@ -94,6 +95,66 @@
 .light-mode .topnav a {
   color: #000; 
 }
+.box{
+   height: 180px;
+		width: 350px;
+		margin: 0 10px;
+		box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+		transition: 1s;
+    color: black;
+    background-color: #fff;
+    text-decoration:none;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    size: 15px;  
+	}
+  .box a{
+    background-color: lightblue;
+    font-size: larger;
+    font-weight: bolder;
+    
+  }
+  p{
+    font-size: large;
+    margin-top: 20px;
+  }
+	.box img{
+		display: block;
+		width:100%;
+		border-radius: 5px;
+    justify-content: center;
+	}
+	.box:hover{
+		transform: scale(1.3);
+		z-index: 2;
+	}
+  .container1{
+    background: rgb(114, 133, 143);
+		width: 100%;
+    height: 100%;
+		padding: 20px;
+		margin: 100px auto;	 
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+  
+.scrollable-sag-panel { overflow: scroll; }
+
+.h{
+  margin: auto;
+  text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+   
+
+}
+span{
+  color: #59c0da;
+  font-weight: bold;
+}
 
    
     
@@ -114,7 +175,7 @@
           </div>
         </a>         
         <a href="news.html">Haberler</a>
-        <a href="#contact">Haritalar</a>
+        <a href="map.html">Haritalar</a>
         
         <div class="topnav-right">
           <a href ="index.html"> Kayıt Ol</a>
@@ -127,14 +188,11 @@
    
     <main class="container main">
       <div class="left">
-        <img src="images/şarjolurken.jpeg" alt="banner image" />
+        <img src="images\electric-charging-port.webp" alt="banner image" />
 
         <div class="hero">
           <h1 class="hero-text"> Elektrikli araçların geleceğini ne bekliyor?</h1>
           <div class="hero-description">
-          
-
-            <a href="#" class="btn">Okumaya Devam Et!</a>
           </div>
         </div>
       </div>
@@ -155,20 +213,54 @@
             <a href="#">Türkiye'de benzine zam!</a>
             <p>Artık insanlar petrolden vazgeçecek mi ?</p>
           </div>
+          <div class="news-item">
+            <a href="#">Türkiye'de benzine zam!</a>
+            <p>Artık insanlar petrolden vazgeçecek mi ?</p>
+          </div>
+          <div class="news-item">
+            <a href="#">Türkiye'de benzine zam!</a>
+            <p>Artık insanlar petrolden vazgeçecek mi ?</p>
+          </div>
         </div>
       </div>
     </main>
 
+
+    <h1>TÜRKİYE'DE SATIŞA SUNULAN <span>ELEKTRİKLİ ARAÇ</span> LİSTESİ</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lectus nibh. Sed in dui dictum, condimentum orci ut, posuere nibh. Fusce vehicula a leo quis posuere. Proin porttitor mollis orci, vel gravida nisl vulputate quis. Etiam maximus dolor at porta vulputate. Cras tempus justo at consequat mattis.</p>
+    <div class="container1">
+      <div class="box">
+        <img src="images\renault-megane-e-tech.webp">
+        <a href="https://www.sifiraracal.com/renault-modelleri/megane-e-tech" class="active">RENAULT MEGANE</a>
+      </div>
+      <div class="box">
+        <img src="images\renault-zoe.webp">
+        <a href="https://www.sifiraracal.com/renault-modelleri/megane-e-tech" class="active">RENAULT ZOE</a>
+      </div>
+      <div class="box">
+        <img src="images\togg-t10x.webp">
+        <a href="https://www.sifiraracal.com/togg-modelleri/t10x" class="active">TOGG T10X</a>
+      </div>
+      <div class="box">
+        <img src="images\peugeot-e-2008.webp">
+        <a href="https://www.sifiraracal.com/peugeot-modelleri/e-2008" class="active">PEUGOT E-2008</a>
+      </div>
+      <div class="box">
+        <img src="images\jaguar-i-pace.webp">
+        <a href="https://www.sifiraracal.com/renault-modelleri/megane-e-tech" class="active">JAGUAR PACE</a>
+      </div>
+    </div>
+
     <section class="container cards">
       <div class="card">
-        <img src="images/içtasarımı.jpeg" alt="" />
+        <img src="images\car.png" alt="" />
         <div class="card-description">
           <a href="#">Elektrikli Araç Parçaları</a>
           <p>İndirimli elektronik parçalar</p>
         </div>
       </div>
       <div class="card">
-        <img src= "images/callout.jpeg"  alt="" />
+        <img src="images\telefonuygulamaları1.jpeg" alt="" />
         <div class="card-description">
           <a href="#">Türkiye'de en çok tercih edilen Elektrikli araç Listesi</a>
           <p>Sizin için en iyisi!</p>
@@ -176,7 +268,7 @@
       </div>
 
       <div class="card">
-        <img src= "images/telefonuygulamaları1.jpeg" />
+        <img src="images\callout.jpeg" />
         <div class="card-description">
           <a href="#">Ios/Android Uygulamaları</a>
           <p>Türk yazılımcılar tarafından oluşturulmuş yerli uygulamalar</p>
@@ -184,6 +276,8 @@
       </div>
 
     </section>
+
+
 
     <script>
       const modeToggle = document.getElementById("mode-toggle");
