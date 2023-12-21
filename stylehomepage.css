@@ -92,6 +92,7 @@ section{
   font-family: 'Times New Roman', Times, serif;
 }
 .home .content1 h1{
+
   font-size: 4em;
   font-weight: 900;
   text-transform: uppercase;
@@ -105,8 +106,9 @@ section{
 
 }
 .home .content1 p{
-  margin-bottom: 65px;
+  margin-bottom: 100px;
   font-size: large;
+
 }
 
 @media (max-width: 1080px){
