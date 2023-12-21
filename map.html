@@ -23,24 +23,23 @@
 
   <div id="map"></div>
  
-    <script>
-      mapboxgl.accessToken = 'pk.eyJ1Ijoic2V2dmFsMG1lcnRvZ2x1IiwiYSI6ImNscWZpZjVwODB6NGwycW82anVmZHd2YmsifQ.GmxxQnQPmjM1uVkyHNoRcg';
-    const map = new mapboxgl.Map({
-    container: 'map',
-    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-79.4512, 43.6568],
-    zoom: 13
-    });
-    
-    // Add the control to the map.
-    map.addControl(
-    new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
-    })
-    );
-    </script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2V2dmFsMG1lcnRvZ2x1IiwiYSI6ImNscWZpZjVwODB6NGwycW82anVmZHd2YmsifQ.GmxxQnQPmjM1uVkyHNoRcg';
+  const map = new mapboxgl.Map({
+  container: 'map', // container ID
+  style: 'mapbox://styles/sevval0mertoglu/cllkuo5fb01bi01pl0zvg8lnm', // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+  center: [41, 21], // starting position
+  zoom: 3 // starting zoom
+  });
+
+  // Add the control to the map.
+map.addControl(
+new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+mapboxgl: mapboxgl
+})
+);
+  </script>
 
 
 
