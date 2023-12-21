@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    
+    <link rel="stylesheet" href="StyleNews.css">
+    <title>Haber Sayfası</title>
+    <style>
+    
+    body {
+      
+      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Times', sans-serif;
+    }
+    
+    
+    .topnav {
+      overflow: hidden;
+      background:  rgba(61,109,156,0.9780287114845938);
+      color: #d69d34;  
+      position: fixed;  
+      z-index: 1000;  
+      width: 100%;
+      
+      
+    }
+    
+    .topnav a{
+     
+      float: left;
+    
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      
+    }
+    
+    .topnav a:hover {
+      border-bottom: .3rem solid #59c0da;
+      padding-bottom: .5rem;
+    }
+    
+    .topnav a.active {
+      color: #d69d34; 
+     
+      
+    }
+    
+    .topnav-centered a {
+      float: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .topnav-right {
+      float: right;
+    }
+    .mode-toggle button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#mode-icon {
+  width: 20px; 
+  height: 20px; 
+}
+
+
+.dark-mode {
+  background-color: #000;
+  color: #fff; 
+}
+
+.dark-mode .topnav a {
+  color: #fff; 
+}
+
+
+.light-mode {
+  background-color: #fff;
+  color: #000; 
+}
+
+.light-mode .topnav a {
+  color: #000; 
+}
+
+   
+    
+    </style> 
+  </head>
+  <body>
+    <header class="container header">
+      <div class="topnav">
+  
+        <div class="topnav-centered">
+          <a href="homepage.html" class="active">Ana Sayfa</a>
+        </div>
+        <a > 
+          <div class="mode-toggle">
+            <button id="mode-toggle">
+                <img id="mode-icon" src="dark-mode-icon.png" alt="Dark Mode">
+            </button>
+          </div>
+        </a>         
+        <a href="news.html">Haberler</a>
+        <a href="#contact">Haritalar</a>
+        
+        <div class="topnav-right">
+          <a href ="index.html"> Kayıt Ol</a>
+          <a href="index.html">Giriş yapın</a>
+          <a href="hakkımızda.html">Hakkımızda</a>
+        </div>            
+      </div>
+
+    </header>
+   
+    <main class="container main">
+      <div class="left">
+        <img src="images/şarjolurken.jpeg" alt="banner image" />
+
+        <div class="hero">
+          <h1 class="hero-text"> Elektrikli araçların geleceğini ne bekliyor?</h1>
+          <div class="hero-description">
+          
+
+            <a href="#" class="btn">Okumaya Devam Et!</a>
+          </div>
+        </div>
+      </div>
+      <div class="sag-panel">
+        <h2 class="title">Haberler</h2>
+
+        <div class="news">
+          <div class="news-item">
+            <a href="#">Elektrikli araçlar vs Dizel </a>
+            <p>Artık sıra elektrikli araçlarda</p>
+          </div>
+
+          <div class="news-item">
+            <a href="#">Elektrik istasyonları fiyatlandırılması</a>
+            <p>Türkiyede benzin ve lpg'de yerel fiyatlandırılmaya giden firmalar </p>
+          </div>
+          <div class="news-item">
+            <a href="#">Türkiye'de benzine zam!</a>
+            <p>Artık insanlar petrolden vazgeçecek mi ?</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="container cards">
+      <div class="card">
+        <img src="images/içtasarımı.jpeg" alt="" />
+        <div class="card-description">
+          <a href="#">Elektrikli Araç Parçaları</a>
+          <p>İndirimli elektronik parçalar</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src= "images/callout.jpeg"  alt="" />
+        <div class="card-description">
+          <a href="#">Türkiye'de en çok tercih edilen Elektrikli araç Listesi</a>
+          <p>Sizin için en iyisi!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src= "images/telefonuygulamaları1.jpeg" />
+        <div class="card-description">
+          <a href="#">Ios/Android Uygulamaları</a>
+          <p>Türk yazılımcılar tarafından oluşturulmuş yerli uygulamalar</p>
+        </div>
+      </div>
+
+    </section>
+
+    <script>
+      const modeToggle = document.getElementById("mode-toggle");
+      const modeIcon = document.getElementById("mode-icon");
+      const body = document.body;
+
+      body.classList.add("dark-mode");
+
+      modeToggle.addEventListener("click", () => {
+         
+          if (modeIcon.src.includes("dark-mode-icon.png")) {
+           
+              modeIcon.src = "light-mode-icon.png";
+              modeIcon.alt = "Light Mode";
+              
+              document.body.classList.remove("dark-mode");
+          } else {
+
+              modeIcon.src = "dark-mode-icon.png";
+              modeIcon.alt = "Dark Mode";
+              
+              document.body.classList.add("dark-mode");
+          }
+      });
+      window.onscroll = function() {myFunction()};
+
+  </script>
+  </body>
+</html>

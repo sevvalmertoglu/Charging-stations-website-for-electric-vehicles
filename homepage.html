@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+      <meta charset="utf-8">
+      
+      
+      
+        <link rel="stylesheet" href="stylehomepage.css">
+        <script src="harici.js"></script>
+       <style>body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      
+      .topnav {
+        position: relative;
+        overflow: hidden;
+        background: rgba(105, 102, 102, 0.329);
+        color: #666666;  
+        position: fixed;  
+        z-index: 1000;  
+        width: 100%;
+        color:#77490d;       
+      }
+      
+      .topnav a{
+       
+        float: left;
+      
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bold;
+        
+      }
+      
+      .topnav a:hover {
+        border-bottom: .3rem solid #198ba7;;
+    padding-bottom: .5rem;
+      }
+      
+      .topnav a.active {
+        color: #000;
+       
+        
+      }
+      
+      .topnav-centered a {
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .topnav-right {
+        float: right;
+      }
+      .mode-toggle button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#mode-icon {
+    width: 20px; 
+    height: 20px; 
+}
+
+
+.dark-mode {
+    background-color: #000;
+    color: #fff; 
+}
+
+.dark-mode .topnav a {
+    color: #fff; 
+}
+
+
+.light-mode {
+    background-color: #fff;
+    color: #000; 
+}
+
+.light-mode .topnav a {
+    color: #000; 
+}
+
+      
+      
+      
+      
+      </style> 
+          
+      </head>
+
+        <body>
+            
+          <div class="topnav">
+  
+            <div class="topnav-centered">
+              <a href="homepage.html" class="active">Ana Sayfa</a>
+            </div>
+            <a > 
+              <div class="mode-toggle">
+                <button id="mode-toggle">
+                    <img id="mode-icon" src="dark-mode-icon.png" alt="Dark Mode">
+                </button>
+              </div>
+            </a>         
+            <a href="news.html">Haberler</a>
+            <a href="map.html">Haritalar</a>
+            
+            <div class="topnav-right">
+              <a href ="index.html"> Kayıt Ol</a>
+              <a href="index.html">Giriş yapın</a>
+              <a href="hakkımızda.html">Hakkımızda</a>
+            </div>
+            
+          </div>
+          
+
+      <section class="home">
+
+        <video class="hero" src="deneme video2.mp4" autoplay muted loop> </video>
+
+
+        <div class="content1">
+          <h1>ŞARJ<br> <span> İSTASYONLARI!</span></h1>
+          <p> Elektrikli araçlar, çevre dostu ve sürdürülebilir bir ulaşım alternatifi olarak öne çıkmaktadır. Bu araçların kullanımının yaygınlaşmasıyla birlikte, şarj altyapısının önemi de giderek artmaktadır. Elektrikli araçların günlük kullanımı için etkili bir şarj altyapısı, kullanıcıların seyahat özgürlüğünü ve konforunu artırır. Şarj istasyonları, şehir içinde ve otoyollarda stratejik noktalarda konumlandırılarak, kullanıcıların araçlarını hızlı ve kolay bir şekilde şarj etmelerine olanak tanır. Bu istasyonlar, sadece araçların enerji ihtiyacını karşılamakla kalmaz, aynı zamanda çevre üzerindeki olumsuz etkileri azaltarak sürdürülebilir bir ulaşım ekosistemi oluşturur. Elektrikli araç şarj altyapısı, gelecekteki ulaşımın temel taşlarından biri olarak, enerji verimliliği ve çevre koruma hedeflerine katkıda bulunarak önemli bir rol oynamaktadır.</p>
+
+       
+        </section>
+        <script>
+          const modeToggle = document.getElementById("mode-toggle");
+          const modeIcon = document.getElementById("mode-icon");
+          const body = document.body;
+
+          body.classList.add("dark-mode");
+  
+          modeToggle.addEventListener("click", () => {
+             
+              if (modeIcon.src.includes("dark-mode-icon.png")) {
+               
+                  modeIcon.src = "light-mode-icon.png";
+                  modeIcon.alt = "Light Mode";
+                  
+                  document.body.classList.remove("dark-mode");
+              } else {
+
+                  modeIcon.src = "dark-mode-icon.png";
+                  modeIcon.alt = "Dark Mode";
+                  
+                  document.body.classList.add("dark-mode");
+              }
+          });
+
+   
+
+      </script>
+
+
+                
+
+            
+
+
+        </body>
+
+    
+
+</html>
