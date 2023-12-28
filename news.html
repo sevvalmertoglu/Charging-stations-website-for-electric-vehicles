@@ -230,24 +230,25 @@ span{
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lectus nibh. Sed in dui dictum, condimentum orci ut, posuere nibh. Fusce vehicula a leo quis posuere. Proin porttitor mollis orci, vel gravida nisl vulputate quis. Etiam maximus dolor at porta vulputate. Cras tempus justo at consequat mattis.</p>
     <div class="container1">
       <div class="box">
-        <img src="images\renault-megane-e-tech.webp">
-        <a href="https://www.sifiraracal.com/renault-modelleri/megane-e-tech" class="active">RENAULT MEGANE</a>
+        <img src="images\renault-megane-e-tech.webp" onclick="redirectToLink('https://www.sifiraracal.com/renault-modelleri/megane-e-tech')">
+        <a href="" class="active">RENAULT MEGANE</a>
       </div>
       <div class="box">
-        <img src="images\renault-zoe.webp">
-        <a href="https://www.sifiraracal.com/renault-modelleri/megane-e-tech" class="active">RENAULT ZOE</a>
+        <img src="images\renault-zoe.webp" onclick="redirectToLink('https://www.sifiraracal.com/renault-modelleri/megane-e-tech')">
+        <a href="" class="active">RENAULT ZOE</a>
       </div>
       <div class="box">
-        <img src="images\togg-t10x.webp">
-        <a href="https://www.sifiraracal.com/togg-modelleri/t10x" class="active">TOGG T10X</a>
+        <img src="images\togg-t10x.webp" onclick="redirectToLink('https://www.sifiraracal.com/togg-modelleri/t10x')">
+        <a href="" class="active">TOGG T10X</a>
       </div>
-      <div class="box">
-        <img src="images\peugeot-e-2008.webp">
-        <a href="https://www.sifiraracal.com/peugeot-modelleri/e-2008" class="active">PEUGOT E-2008</a>
+      <div class="box" >
+        <img src="images\peugeot-e-2008.webp" onclick="redirectToLink('https://www.sifiraracal.com/peugeot-modelleri/e-2008x')">
+        <a href="" class="active">PEUGOT E-2008</a>
       </div>
+      
       <div class="box">
-        <img src="images\jaguar-i-pace.webp">
-        <a href="https://www.sifiraracal.com/renault-modelleri/megane-e-tech" class="active">JAGUAR PACE</a>
+        <img src="images\jaguar-i-pace.webp" onclick="redirectToLink('https://www.sifiraracal.com/jaguar-modelleri/i-pace-ozellikleri/se-ev400-awd-otomatik')">
+        <a href="https://www.sifiraracal.com/jaguar-modelleri/i-pace-ozellikleri/se-ev400-awd-otomatik" class="active">JAGUAR PACE</a>
       </div>
     </div>
 
@@ -277,8 +278,11 @@ span{
 
     </section>
 
-
-
+    <script>
+      function redirectToLink(link) {
+        window.location.href = link;
+      }
+    </script>
     <script>
       const modeToggle = document.getElementById("mode-toggle");
       const modeIcon = document.getElementById("mode-icon");
