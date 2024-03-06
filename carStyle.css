@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
  /* Arka plan resmi ekleyin */
- background-image: url('/images/background.png');
+ background-image: url('images\background.png');
  /* Arka plan resminin boyutunu ayarlayın */
  background-size: cover;
  /* Arka plan resminin konumunu ayarlayın */
@@ -65,9 +65,10 @@
   font-weight: 800;
   color: #333;
 }
-.details .job {
-  font-size: 12px;
+.details .slogan {
+  font-size: 20px;
   font-weight: 400;
+  font-weight: 100;
   color: #333;
 }
 /* swiper button css */
