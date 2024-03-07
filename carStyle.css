@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
  /* Arka plan resmi ekleyin */
- background-image: url('images\background.png');
+ background-image: url(background.png);
  /* Arka plan resminin boyutunu ayarlayın */
  background-size: cover;
  /* Arka plan resminin konumunu ayarlayın */
@@ -51,10 +51,7 @@
   font-weight: 400;
   color: #333;
 }
-.slide .quote-icon {
-  font-size: 30px;
-  color: #4070f4;
-}
+
 .slide .details {
   display: flex;
   flex-direction: column;
@@ -92,7 +89,7 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 .swiper-pagination-bullet-active {
-  background-color: #4070f4;
+  background-color: #e09237;
 }
 @media screen and (max-width: 768px) {
   .slide p {
