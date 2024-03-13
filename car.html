@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>   
     <style>
       .tire img{
         width: 35px;
@@ -11,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Testimonial Slider</title>
+    <title>Car</title>
 
     <link rel="stylesheet" href="swiper-bundle.min.css" />
 
@@ -24,6 +27,45 @@
     />
   </head>
   <body>
+   
+    <!-- Cars menü sidebar -->
+     <body>
+       <input type="checkbox" id="check">
+       <label for="check">
+         <i class="fas fa-bars" id="btn"></i>
+         <i class="fas fa-times" id="cancel"></i>
+       </label>
+       <div class="sidebar">
+         <header>Menü</header>
+         <a href="#" class="active">
+           <i class="fas fa-qrcode"></i>
+           <span>Ana Sayfa</span>
+         </a>
+         <a href="#">
+           <i class="fas fa-globe"></i>
+           <span>Haritalar</span>
+         </a>
+         <a href="#">
+           <i class="fas fa-newspaper"></i>
+           <span>Haberler</span>
+         </a>
+         <a href="#">
+           <i class="far fa-question-circle"></i>
+           <span>Hakkımızda</span>
+         </a>
+         <a href="#">
+          <i class='fa fa-sign-in'></i>
+           <span>Giriş yap</span>
+         </a>
+         <a href="#">
+          <i class='fa fa-sign-out'></i>
+          <span>Çıkış yap</span>
+        </a>
+       </div>
+   </body>
+       
+   </body>
+   
     <section class="container">
       <div class="testimonial mySwiper">
         <div class="testi-content swiper-wrapper">
@@ -94,10 +136,8 @@
       </div>
     </section>
 
-    <!-- Swiper JS -->
     <script src="swiper-bundle.min.js"></script>
 
-    <!-- JavaScript -->
     <script src="carScript.js"></script>
   </body>
 </html>
