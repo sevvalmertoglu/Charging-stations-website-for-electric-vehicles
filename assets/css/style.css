@@ -186,7 +186,7 @@ body {
   color: var(--white);
 }
 
-.w-100 { width: 100%; }
+.w-100 { width: 85%; }
 
 .has-before,
 .has-after {
