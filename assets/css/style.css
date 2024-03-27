@@ -325,7 +325,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 0%;
   background-color: var(--white);
   height: 0;
   overflow: hidden;
@@ -335,7 +335,7 @@ body {
 
 .navbar.active {
   visibility: visible;
-  height: 224px;
+  height: 124px;
   transition-duration: 0.5s;
 }
 
