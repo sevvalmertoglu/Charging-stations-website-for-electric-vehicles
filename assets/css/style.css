@@ -227,7 +227,8 @@ body {
 }
 
 .img-holder {
-  aspect-ratio: var(--width) / var(--height);
+  width: 300px;
+  height: 250px;
   background-color: var(--light-gray);
   overflow: hidden;
 }
