@@ -891,6 +891,7 @@ body {
     max-width: 850px;
     width: 100%;
     margin-inline: auto;
+   
   }
 
 
@@ -921,7 +922,7 @@ body {
 
   .hero-banner {
     position: absolute;
-    bottom: 40px;
+    bottom: 140px;
     right: 25%;
     width: 90%;
   }
@@ -1033,7 +1034,7 @@ body {
 
   .hero .container { grid-template-columns: 0.9fr 1fr; }
 
-  .hero-content { margin-block: 40px; }
+  .hero-content { margin-block: 0px; }
 
   .hero-title { line-height: 1.2; }
 
