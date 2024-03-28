@@ -384,7 +384,7 @@ body {
   color: var(--black);
 }
 
-.hero-banner { margin-block-end: 5%; }
+.hero-banner { margin-block-end: -15%; }
 
 
 
@@ -807,7 +807,7 @@ body {
 .back-top-btn {
   position: fixed;
   bottom: 10px;
-  right: 120px;
+  left: 20px;
   background-color: var(--yellow-green);
   color: var(--white);
   font-size: 2rem;
@@ -922,7 +922,7 @@ body {
 
   .hero-banner {
     position: absolute;
-    bottom: 140px;
+    bottom: 150px;
     right: 25%;
     width: 90%;
   }
