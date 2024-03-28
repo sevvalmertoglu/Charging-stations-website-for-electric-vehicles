@@ -807,7 +807,7 @@ body {
 .back-top-btn {
   position: fixed;
   bottom: 10px;
-  right: 20px;
+  left: 20px;
   background-color: var(--yellow-green);
   color: var(--white);
   font-size: 2rem;
@@ -1033,7 +1033,7 @@ body {
 
   .hero .container { grid-template-columns: 0.9fr 1fr; }
 
-  .hero-content { margin-block: 100px; }
+  .hero-content { margin-block: 40px; }
 
   .hero-title { line-height: 1.2; }
 
