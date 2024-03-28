@@ -293,7 +293,7 @@ body {
   left: 0;
   width: 100%;
   background-color: var(--yellow-green);
-  padding-block: 25px;
+  padding-block: 0px;
   z-index: 4;
 }
 
