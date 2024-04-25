@@ -8,7 +8,7 @@
 }
 
 body{
-    background: url(Charger.jpeg);
+    background: url(electricalChargeStation.png);
     height: 100vh;
     background-size: 100% 100%;
     display: flex;
@@ -47,7 +47,7 @@ body{
 }
 
 .container button{
-    background-color: #1d68d8;
+    background-color: #144d9d;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -161,9 +161,9 @@ body{
 }
 
 .toggle{
-    background-color: #1d68d8;
+    background-color: #4b72ad;
     height: 100%;
-    background: linear-gradient(to right, #80A1D4, #1d68d8);
+    background: linear-gradient(to right, #bcc7d8, #14438a);
     color: #fff;
     position: relative;
     left: -100%;
