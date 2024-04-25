@@ -1,145 +1,821 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Web çözümleme</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Geleceği Şarjla, Doğayı Koru:Elektrikli Araçlarla Sürdürülebilir Yolculuklar!</title>
+  <meta name="title" content="Ana Sayfa">
+  <meta name="description" content="Geleceği Şarjla, Doğayı Koru:Elektrikli Araçlarla Sürdürülebilir Yolculuklar!">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="stylesheet" href="./assets/font/font.css">
+
+  <link rel="preload" as="image" href="./assets/images/loading.svg">
+  <link rel="preload" as="image" href="./assets/images/loading-circle.svg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+     <!-- Crisp Chat botu -->
+     <script type="text/javascript">window.$crisp=[];
+      window.CRISP_WEBSITE_ID="1624a04d-d97f-4d91-b60a-f5462e6d3262";
+      (function(){d=document;s=d.createElement("script");
+      s.src="https://client.crisp.chat/l.js";s.async=1;
+      d.getElementsByTagName("head")[0].appendChild(s);})();
+      </script>
+      <style>
+        .logo{
+
+          
+        }
+        </style>
+
 </head>
 
-<body>
+<body id="top">
 
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form method="post"
-						onsubmit="return false;">
-                <h1>Hesap oluştur</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>ya da mail adresinizle kayıt olun</span>
-                <input type="text" placeholder="İsim">
-                <input type="text" id="email" placeholder="Email">
-                <input type="password" id="password" placeholder="Şifre">
+  <div class=" preload-box" data-preloader>
+    <img src="./assets/images/loading.svg" width="45" height="45" alt="loading">
 
-                <input type="submit" id="signUp" name="Register" value="Register" />
-               
-               
-            </form>
-           
-        </div>
-        <div class="form-container sign-in">
-            <form method="post"
-						onsubmit="return false;">
-                <h1>Giriş yap</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>ya da maille giriş yapın</span>
-                <input type="email" id="emaill" placeholder="Email">
-                <input type="password" id="passwordd" placeholder="Şifre">
-                <a href="#">Şifrenizi mi unuttunuz?</a>
+    <img src="./assets/images/loading-circle.svg" width="75" height="75" alt="loading" class="preload-circle">
+  </div>
 
-                <input type="submit" id="signIn" name="signIn" value="Sign In" />
-               
-            </form>
-        </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Tekrar Hoşgeldiniz!</h1>
-                    <p>Giriş yapmak için gerekli bilgileri girin</p>
-                    <button class="hidden" id="login">Giriş yap</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Merhaba!</h1>
-                    <p>Kayıt olmak için gerekli bilgileri girin</p>
-                    <button class="hidden" id="register">Kayıt ol</button>
-                  
-                </div>
-            </div>
-        </div>
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/ELECTRA.png" width="150" height="20" alt="volti home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="car.html" class="navbar-link">Popüler Elektrikli Arabalar</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="hakkımızda.html" class="navbar-link">Hakkımızda</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index2.html" class="navbar-link">Giriş Yap</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="news.html" class="navbar-link">Haberler</a>
+          </li>
+
+
+        </ul>
+      </nav>
+
+      <div class="header-action">
+
+        <a href="map.html" class="btn btn-primary">
+          <span class="span">Şarj İstasyonları</span>
+
+          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+        </a>
+
+      </div>
+
+      <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="open"></ion-icon>
+        <ion-icon name="close-outline" aria-hidden="true" class="close"></ion-icon>
+      </button>
+
     </div>
+  </header>
+  <main>
+    <article>
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content" data-reveal="left">
+
+            <h1 class="h1 hero-title">
+              Geleceği Şarjla, Doğayı Koru: <span class="span">Elektrikli Araçlarla</span> Sürdürülebilir Yolculuklar!             </h1>
+
+            <ul class="hero-list">
+
+              <li>
+                <div class="hero-card">
+                  <ion-icon name="car" aria-hidden="true"></ion-icon>
+
+                  <p class="card-subtitle">Türkiye'de Kasım <br> 2023 itibarıyla</p>
+
+                  <p class="card-title">69 bin 914 tane <br> Elektrikli Araç <br> bulunmaktadır</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="hero-card">
+                  <ion-icon name="stopwatch-outline" aria-hidden="true"></ion-icon>
+
+                  <p class="card-subtitle">0'dan 100'e <br> (Tesla Model 3) </p>
+
+                  <p class="card-title">2,3 saniye'de <br> çıkar</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="hero-card">
+                  <ion-icon name="speedometer-outline" aria-hidden="true"></ion-icon>
+
+                  <p class="card-subtitle">Menzili en uzun <br> elektrikli araba <br> (Lucid Air)</p>
+
+                  <p class="card-title">830 km</p>
+                </div>
+              </li>
+
+            </ul>
+
+            <a href="map.html" class="btn btn-primary">
+              <span class="span">Şarj İstasyonları</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner" data-reveal="right">
+            <img src="./assets/images/hero-banner.png" width="1116" height="766" alt="Bike" class="w-100">
+          </figure>
+
+        </div>
+      </section>
 
 
-    
-    <!-- FireBase entegresi -->
 
-    <script type="module">
-        //import { initializeApp } from "firebase/app";
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyBMoVqbGK9NLUCZDOVuZYqMQnC3wj6dAOM",
-          authDomain: "web-cozumleme-dersi-projesi.firebaseapp.com",
-          projectId: "web-cozumleme-dersi-projesi",
-          storageBucket: "web-cozumleme-dersi-projesi.appspot.com",
-          messagingSenderId: "555907940508",
-          appId: "1:555907940508:web:3205530253bcfc435f2d59"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
-        const auth = getAuth();
-      
-      
-        signUp.addEventListener('click',(e) => {
-      
-          var email = document.getElementById('email').value;
-          var password = document.getElementById('password').value;
-      
-      
-          createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in 
-          const user = userCredential.user;
-          alert('user created!');
-          // ...
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-      
-          alert(errorMessage);
-          // ..
-        });
-        })
-      
-      signIn.addEventListener('click',(e) => {
-      
-          var email = document.getElementById('emaill').value;
-          var password = document.getElementById('passwordd').value;
-      
-      
-          signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in 
-          const user = userCredential.user;
-          window.location.href = 'homepage.html'; //giriş doğruysa home sayfasına geçer
-          // ...
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          alert(errorMessage);
-        });
-      })
-      </script>
 
-    <script src="script.js"></script>
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" aria-labelledby="about-label">
+        <div class="container">
+
+          <figure class="about-banner" data-reveal="left">
+            <img src="./assets/images/about-banner-1.png" width="380" height="382" loading="lazy" alt="about banner"
+              class="w-100 img-1">
+
+            <img src="./assets/images/about-banner-2.png" width="347" height="349" loading="lazy" alt="about banner"
+              class="w-100 img-2">
+          </figure>
+
+          <div class="about-content" data-reveal="right">
+
+            <p class="section-subtitle has-before" id="about-label">Vizyonumuz:</p>
+
+            <h2 class="h2 section-title">
+              Doğayı Korumak: Karbon Ayak izini azaltmak
+            </h2>
+
+            <p class="section-text">
+              Elektrikli şarj istasyonları, sürdürülebilir bir geleceğin temel taşlarından biridir; 
+              çünkü fosil yakıtlardan kaynaklanan çevresel etkileri azaltırken,
+               elektrikli araçların yaygınlaşmasını teşvik ederek hava kalitesini ve enerji verimliliğini artırır.
+            </p>
+
+            <div class="about-wrapper">
+
+              <div class="about-card">
+
+                <div class="title-wrapper">
+                  <ion-icon name="heart" aria-hidden="true"></ion-icon>
+
+                  <h3 class="card-title">Geleceğin Kalbi</h3>
+                </div>
+
+                <p class="card-text">
+                    Geleceğin Kalbi olarak adlandırılabilir
+                     çünkü temiz enerjiye geçişin 
+                     önemli bir parçasını oluştururlar.
+                </p>
+
+              </div>
+
+              <div class="about-card">
+
+                <div class="title-wrapper">
+                  <ion-icon name="car-outline" aria-hidden="true"></ion-icon>
+
+                  <h3 class="card-title">Elektrikli Araçlar</h3>
+                </div>
+
+                <p class="card-text">
+                  Enerji verimliliği açısından fosil yakıtlı
+                   araçlara göre önemli bir alternatif sunarlar.
+                </p>
+
+              </div>
+
+            </div>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <span class="span">Doğa Dostu</span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <span class="span">Sürdürülebilir</span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <span class="span">Enerji Verimliliği </span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <span class="span">Sessiz Çalışma </span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <span class="span">Daha Az Bakım Gerektirme </span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <span class="span">Yüksek Konfor </span>
+              </li>
+
+            </ul>
+
+            <a href="hakkımızda.html" class="btn btn-primary">
+              <span class="span">Daha Fazla</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
+      <section class="section stats" aria-label="statistics">
+        <div class="container">
+
+          <ul class="stats-list" data-reveal>
+
+            <li class="stats-card">
+              <h3 class="h3 card-title">81 İlde</h3>
+
+              <p class="card-text">
+                Türkiye'de tüm illerde elektrikli şarj istasyonu bulunmakta.
+              </p>
+            </li>
+
+            <li class="stats-card">
+              <h3 class="h3 card-title">10 bin 576</h3>
+
+              <p class="card-text">
+                Türkiye'de Kasım 2023 itibarıyla 10 bin 576 şarj istasyonu var.
+              </p>
+            </li>
+
+            <li class="stats-card">
+              <h3 class="h3 card-title">CO2</h3>
+
+              <p class="card-text">
+                Elektrikli otomobil, bir dizel otomobile kıyasla kullanım ömrü boyunca %50'ye kadar daha az CO2 üretir.
+              </p>
+            </li>
+
+          </ul>
+
+          <div class="stats-banner" data-reveal>
+            <img src="./assets/images/stats-banner.jpg" width="1398" height="565" loading="lazy" alt="video banner"
+              class="img-cover">
+
+            <button class="play-btn" aria-label="play video">
+              <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="section service" aria-labelledby="service-label">
+        <div class="container">
+
+          <p class="section-subtitle has-before" id="service-label" data-reveal>Neden elektrikli Araç</p>
+
+          <h2 class="h2 section-title" data-reveal>
+            Yeşil Yola Çık, Doğayı Koru!
+          </h2>
+
+          <div class="wrapper">
+
+            <ul class="service-list" data-reveal="left">
+
+              <li class="service-item">
+                <div>
+                  <h3 class="h5 card-title">Sürdürülebilir Enerji</h3>
+
+                  <p class="card-text">   
+                  Evde Elektrikli Araçlarınızı Akıllıca Şarj Edin!
+                  </p>
+                </div>
+
+                <div class="card-icon">
+                  <ion-icon name="battery-charging-outline" aria-hidden="true"></ion-icon>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div>
+                  <h3 class="h5 card-title">Tasarruflu ve Ekonomik</h3>
+
+                  <p class="card-text">
+                    Ekonomik sürüş için tasarruflu çözüm.
+                  </p>
+                </div>
+
+                <div class="card-icon">
+                  <ion-icon name="wallet-outline" aria-hidden="true"></ion-icon>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div>
+                  <h3 class="h5 card-title">Sıfır Emisyon, Temiz Gelecek</h3>
+
+                  <p class="card-text">
+                    Elektrikli araçlarla çevre dostu ve bütçe dostu sürüşler yapın
+                  </p>
+                </div>
+
+                <div class="card-icon">
+                  <ion-icon name="leaf-outline"aria-hidden="true"></ion-icon>
+                </div>
+              </li>
+
+            </ul>
+
+            <figure class="service-banner img-holder" style="--width: 105; --height: 110;">
+              <img src="./assets/images/service.png" width="05" height="10" loading="lazy" alt="service banner"
+                class="img-cover">
+            </figure>
+
+            <ul class="service-list" data-reveal="right">
+
+              <li class="service-item">
+                <div class="card-icon">
+                  <ion-icon name="car-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h5 card-title">Düşük Bakım, Yüksek Performans</h3>
+
+                  <p class="card-text">
+                    Pratik ve verimli sürüşler için elektrikli alternatifleri tercih edin.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="card-icon">
+                  <ion-icon name="speedometer-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h5 card-title">Konforlu Sürüş</h3>
+
+                  <p class="card-text">
+                    Rahat ve keyifli yolculuklar yapın.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="card-icon">
+                  <ion-icon name="earth-outline" aria-hidden="true" ></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h5 card-title">Sessiz ve Huzurlu</h3>
+
+                  <p class="card-text">
+                    Elektrikli araçlarla rahat ve keyifli yolculuklar yapın.
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <section class="cta">
+        <div class="container">
+
+          <div class="cta-card" data-reveal="left">
+
+            <div>
+              <h2 class="h1 card-title">Yeni Elektrikli Arkadaşın</h2>
+
+              <p class="card-text">
+                Yeni nesil mobilite çözümü üreten Citroën AMI, otomobil görünümünün evrimine aralıksız katkıda bulunan Citroën mirasını taşıyor. Elektrikli AMI'yi keşfedin!
+              </p>
+            </div>
+
+            <a href="car.html" class="btn btn-primary">
+              <span class="span">Bilgi edinin</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <figure class="cta-banner" data-reveal="right">
+            <img src="assets/images/citroenBlog.webp" width="330" height="206" loading="lazy" alt="cta banner"
+              class="img-cover">
+          </figure>
+
+        </div>
+      </section>
+
+      <section class="section blog" aria-labelledby="blog-label">
+        <div class="container">
+
+          <div class="title-wrapper" data-reveal>
+
+            <div>
+              <p class="section-subtitle has-before" id="blog-label">Fresh News</p>
+
+              <h2 class="h2 section-title">Türkiye’de Elektrikli Araç Pazarında Yeni Trendler ve Gelişmeler</h2>
+            </div>
+
+            <a href="https://medium.com/@smgulcicek/t%C3%BCrkiyede-elektrikli-ara%C3%A7-pazar%C4%B1nda-yeni-trendler-ve-geli%C5%9Fmeler-cf228a99e99c" class="btn btn-secondary">
+              <span class="span">Daha Fazlası için </span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <ul class="blog-list" data-reveal>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 770; --height: 550;">
+                  <img src="./assets/images/blog-1.jpg" width="770" height="550" loading="lazy"
+                    alt="Elektrikli Araçların Geleceği" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="publish-date" datetime="2022-06-03">06 Mart 2024</time>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Üye</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbubble-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">3 Comments</span>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h5">
+                    <a href="https://medium.com/bid%C3%BCnyai%CC%87%C3%A7erik/elektrikli-ara%C3%A7lar%C4%B1n-gelece%C4%9Fi-7ee37ebd2d41" class="card-title">
+                      Elektrikli Araçların Geleceği
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 770; --height: 550;">
+                  <img src="./assets/images/blog-2.jpg" width="770" height="550" loading="lazy"
+                    alt="Yerli elektrikli VERY (Özellikleri, Fiyatı ve Menzili) – Tüm Detaylar" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="publish-date" datetime="2022-06-03">20 Mart 2024</time>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Admin</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbubble-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">10 Comments</span>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h5">
+                    <a href="https://elektrikliyiz.com/yerli-araba-very/" class="card-title">
+                      Yerli elektrikli VERY (Özellikleri, Fiyatı ve Menzili) – Tüm Detaylar
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 770; --height: 550;">
+                  <img src="./assets/images/blog-3.jpg" width="770" height="550" loading="lazy"
+                    alt="Elektrikli arabalar, 2024'ten beri benzinli ve dizelden daha ucuz" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="publish-date" datetime="2022-06-03">12 Ocak 2024</time>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Ziyaretçi</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbubble-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">7 Comments</span>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h5">
+                    <a href="https://tr.green-ecolog.com/15339458-electric-cars-cheaper-than-gasoline-and-diesel-since-2024" class="card-title">
+                      Elektrikli arabalar, 2024'ten beri benzinli ve dizelden daha ucuz
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+      <section class="contact" aria-label="contact" data-reveal="right">
+        <div class="container">
+
+          <ul class="contact-list">
+
+            
+
+            <li>
+              <div class="contact-card">
+                <div class="card-icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h6">E-mail Address</h3>
+
+                  <a href="mail:Electra@gmail.com" class="card-subtitle">Electra@gmail.com</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-card">
+                <div class="card-icon">
+                  <ion-icon name="compass-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h6"></h3>
+
+                  <address class="card-subtitle">Türkiye/Kütahya</address>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section" data-reveal>
+
+        <div class="newsletter-card">
+
+          <div class="card-icon">
+            <ion-icon name="mail-unread-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <h3 class="h3 card-title">Yeni geliştirmelerden daha hızlı haber sahibi olmak için şimdi kayıt olun </h3>
+
+          <form action="#" class="newsletter-form">
+
+            <label for="email" class="label">mail adresiniz</label>
+
+            <input type="emal" name="email" id="email" placeholder="Mail Adresiniz" required class="email-field">
+
+            <button type="submit" class="btn btn-primary">Abone olun</button>
+
+          </form>
+
+        </div>
+
+        <div class="footer-list">
+
+          <p class="h6 has-after">ELECTRA</p>
+
+          <p class="footer-text">
+            Elektrikli araç kullanıcılarına , şarj istasyonlarının konumlarına dair hızlı , güvenilir ve etkileşimli bilgilere erişim imkanı sunuyoruz.
+          </p>
+
+          <a href="#" class="btn-outline">
+            <span class="span">Başa Dön</span>
+
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="h6 has-after">Electra Hakkında</p>
+          </li>
+
+          <li>
+            <a href="hakkımızda.html" class="footer-link">Bilgi edinin </a>
+          </li>
+
+          <li>
+            <a href="map.html" class="footer-link">Haritalarımız</a>
+          </li>
+
+          <li>
+            <a href="news.html" class="footer-link">Haberler ve Blog </a>
+          </li>
+
+          <li>
+            <a href="hakkımızda.html" class="footer-link">Bizimle iletişime geçin!</a>
+          </li>
+
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="h6 has-after">İletişim</p>
+          </li>
+
+          <li>
+            <address class="footer-text">
+              Dumlupınar Üniversitesi, Kütahya/Merkez
+            </address>
+          </li>
+
+
+          <li>
+            <a href="tel:(+90) 507168168 4" class="contact-link">(+90) 507 156 xxx x</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          <ul class="footer-bottom-list">
+
+            <li>
+              <a href="hakkımızda.html" class="footer-bottom-link">Bize buradan ulaşabilirsiniz</a>
+            </li>
+
+
+            <li>
+             
+            </li>
+
+          </ul>
+
+          <p class="copyright">© Copyright Electra 2024 Tüm hakları saklıdır</p>
+        </div>
+
+        <img src="assets\images\logo.png" width="100" height="63" loading="lazy" >
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+  <a href="#top" class="back-top-btn" aria-label="go to top" data-go-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
