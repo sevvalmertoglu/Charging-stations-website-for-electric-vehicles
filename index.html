@@ -250,8 +250,8 @@
 
             </ul>
 
-            <a href="hakkımızda.html" class="btn btn-primary">
-              <span class="span">Daha Fazla</span>
+            <a href="index2.html" class="btn btn-primary">
+              <span class="span">Daha Fazlası İçin Kayıt Ol</span>
 
               <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -303,10 +303,6 @@
           <div class="stats-banner" data-reveal>
             <img src="./assets/images/stats-banner.jpg" width="1398" height="565" loading="lazy" alt="video banner"
               class="img-cover">
-
-            <button class="play-btn" aria-label="play video">
-              <ion-icon name="play" aria-hidden="true"></ion-icon>
-            </button>
           </div>
 
         </div>
@@ -468,7 +464,7 @@
               <h2 class="h2 section-title">Türkiye’de Elektrikli Araç Pazarında Yeni Trendler ve Gelişmeler</h2>
             </div>
 
-            <a href="https://medium.com/@smgulcicek/t%C3%BCrkiyede-elektrikli-ara%C3%A7-pazar%C4%B1nda-yeni-trendler-ve-geli%C5%9Fmeler-cf228a99e99c" class="btn btn-secondary">
+            <a href="news.html" class="btn btn-secondary">
               <span class="span">Daha Fazlası için </span>
 
               <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -657,15 +653,36 @@
             <ion-icon name="mail-unread-outline" aria-hidden="true"></ion-icon>
           </div>
 
-          <h3 class="h3 card-title">Yeni geliştirmelerden daha hızlı haber sahibi olmak için şimdi kayıt olun </h3>
+          <h3 class="h3 card-title">Önerileriniz için bizimle iletişime geçin!</h3>
 
           <form action="#" class="newsletter-form">
 
-            <label for="email" class="label">mail adresiniz</label>
 
-            <input type="emal" name="email" id="email" placeholder="Mail Adresiniz" required class="email-field">
+<form method="post" name="contact_form"
+action="contact-form-handler.php">
+<label for="name" class="label">İsim Soyisim</label>
 
-            <button type="submit" class="btn btn-primary">Abone olun</button>
+<input type="emal" name="email" id="email" placeholder="İsim Soyisim" required class="email-field">
+
+    <label for="email" class="label">Mail</label>
+
+    <input type="" name="email" id="email" placeholder="Mail" required class="email-field">
+
+    <label for="email" class="label">Mesaj Giriniz</label>
+
+    <textarea type="text" name="text" id="email" placeholder="Mesaj" required class="email-field" ></textarea>>
+   
+</form>	
+
+<script language="JavaScript">
+  var frmvalidator  = new Validator("contactform");
+  frmvalidator.addValidation("name","req","Please provide your name");
+  frmvalidator.addValidation("email","req","Please provide your email");
+  frmvalidator.addValidation("email","email",
+    "Please enter a valid email address");
+  </script>
+
+            <button type="submit" class="btn btn-primary">Gönder</button>
 
           </form>
 
@@ -706,7 +723,7 @@
           </li>
 
           <li>
-            <a href="hakkımızda.html" class="footer-link">Bizimle iletişime geçin!</a>
+            <a href="aboutUs.html" class="footer-link">Bizimle iletişime geçin!</a>
           </li>
 
 
@@ -736,20 +753,8 @@
       <div class="footer-bottom">
 
         <div>
-          <ul class="footer-bottom-list">
 
-            <li>
-              <a href="hakkımızda.html" class="footer-bottom-link">Bize buradan ulaşabilirsiniz</a>
-            </li>
-
-
-            <li>
-             
-            </li>
-
-          </ul>
-
-          <p class="copyright">© Copyright Electra 2024 Tüm hakları saklıdır</p>
+          <p class="copyright">© Copyright Electra 2024 Tüm hakları saklıdır.</p>
         </div>
 
         <img src="assets\images\logo.png" width="100" height="63" loading="lazy" >
