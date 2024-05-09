@@ -17,6 +17,10 @@
   <link rel="preload" as="image" href="./assets/images/loading.svg">
   <link rel="preload" as="image" href="./assets/images/loading-circle.svg">
   <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+/>
 
      <!-- Crisp Chat botu -->
      <script type="text/javascript">window.$crisp=[];
@@ -60,9 +64,46 @@
           <li class="navbar-item">
             <a href="news.html" class="navbar-link">Haberler</a>
           </li>
-
-
+          <div class="profile-dropdown">
+            <div onclick="toggle()" class="profile-dropdown-btn">
+              <div class="profile-img">
+                <i class="fa-solid fa-circle"></i>
+                <img src="./assets/images/user.jpeg" class="profile-img"> 
+              </div>
+    
+              <span
+                >Şevval
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            </div>
+    
+            <ul class="profile-dropdown-list">
+              <li class="profile-dropdown-list-item">
+                <a href="ProfilePage/index.html">
+                  <i class="fa-regular fa-user"></i>
+                  Profil
+                </a>
+              </li>
+    
+              <li class="profile-dropdown-list-item">
+                <a href="ProfilePage/profileEdit.html">
+                  <i class="fa-solid fa-sliders"></i>
+                  Profili Düzenle
+                </a>
+              </li>
+              <hr />
+    
+              <li class="profile-dropdown-list-item">
+                <a href="#">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Çıkış Yap
+                </a>
+              </li>
+            </ul>
+          </div>
         </ul>
+
+       
       </nav>
 
       <div class="header-action">
