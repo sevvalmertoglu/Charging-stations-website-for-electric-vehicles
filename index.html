@@ -64,15 +64,15 @@
           <li class="navbar-item">
             <a href="news.html" class="navbar-link">Haberler</a>
           </li>
-          <div class="profile-dropdown">
+          <div id="dropDown" class="profile-dropdown">
             <div onclick="toggle()" class="profile-dropdown-btn">
               <div class="profile-img">
                 <i class="fa-solid fa-circle"></i>
                 <img src="./assets/images/user.jpeg" class="profile-img"> 
               </div>
     
-              <span
-                >Şevval
+              <span id="isim3"
+                >Profil
                 <i class="fa-solid fa-angle-down"></i>
               </span>
             </div>
@@ -94,8 +94,8 @@
               <hr />
     
               <li class="profile-dropdown-list-item">
-                <a href="#">
-                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <a id="signOutButton" >
+                  <i  class="fa-solid fa-arrow-right-from-bracket"></i>
                   Çıkış Yap
                 </a>
               </li>
@@ -841,9 +841,6 @@ action="contact-form-handler.php">
   </a>
 
 
-
-
-
   <!-- 
     - custom js link
   -->
@@ -854,6 +851,57 @@ action="contact-form-handler.php">
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getDatabase, ref, onValue  } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+  
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBMoVqbGK9NLUCZDOVuZYqMQnC3wj6dAOM",
+        authDomain: "web-cozumleme-dersi-projesi.firebaseapp.com",
+        projectId: "web-cozumleme-dersi-projesi",
+        storageBucket: "web-cozumleme-dersi-projesi.appspot.com",
+        messagingSenderId: "555907940508",
+        appId: "1:555907940508:web:3205530253bcfc435f2d59"
+      };
+  
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    var profileDropdown = document.getElementById('dropDown');
+    auth.onAuthStateChanged((user) => {
+    if (user) {
+    const userId = user.uid;
+    // Kullanıcı giriş yaptıysa dropdown'u göster
+    profileDropdown.style.display = 'block';
+
+    onValue(ref(database, 'users/' + userId), (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          document.getElementById('isim3').textContent = data.isim || '';
+        }
+      });
+    } else {
+      // Kullanıcı giriş yapmadıysa dropdown'u gizle
+      profileDropdown.style.display = 'none';
+    }
+});
+
+    signOutButton.addEventListener('click', (e) => {
+      const auth = getAuth();
+    signOut(auth).then(() => {
+    // Çıkış yapma başarılı, kullanıcıyı index2.html sayfasına yönlendir
+     window.location.assign('index2.html');
+     alert('çıkış işlemi başarılı');
+    }).catch((error) => {
+    // Çıkış yapma sırasında bir hata oluştu
+     console.error('Çıkış yapma hatası:', error);
+  });
+});
+  </script>
 
 </body>
 

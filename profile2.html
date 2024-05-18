@@ -79,7 +79,7 @@
 			<nav id="sidebar">
 				<div class="p-4 pt-5">
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(ProfilePage/images/user.jpeg);"></a>
-          <h3 class="name" > Şevval Mertoğlu </h3>
+          <h3 id="isimm2" class="name">Profil </h3>
 	        <ul class="list-unstyled components mb-5">
             
 	          <li class="active">
@@ -147,23 +147,23 @@
                           <h4 class="text-right">Profil</h4>
                       </div>
                       <div class="row mt-2">
-                          <div class="col-md-6"><label class="labels">İsim:</label> <br> <label class="label">Şevval</label></div>
-                          <div class="col-md-6"><label class="labels">Soyisim:</label> <br> <label class="label">Mertoğlu</label></div>
+                          <div class="col-md-6"><label class="labels">İsim:</label> <br> <label id="isimm" class="label"> </label></div>
+                          <div class="col-md-6"><label class="labels">Soyisim:</label> <br> <label id="soyisimm" class="label"> </label></div>
                       </div>
                       <div class="row mt-3">
-                          <div class="col-md-12"><label class="labels">Telefon Numarası:</label><br> <label class="label">0538 555 55 44</label></div>
-                          <div class="col-md-12"><label class="labels">Meslek:</label><br> <label class="label">Bilgisayar Mühendisi</label></div>
-                          <div class="col-md-12"><label class="labels">Adres:</label><br> <label class="label">Kemalpaşa mah. 7070.sokak no:0</label></div>
-                          <div class="col-md-12"><label class="labels">Şehir:</label><br> <label class="label">İzmir</label></div>
-                          <div class="col-md-12"><label class="labels">Mail:</label><br> <label class="label">sevval.mertoglu@ogr.dpu.edu.tr</label></div>
+                          <div class="col-md-12"><label class="labels">Telefon Numarası:</label><br> <label id="telefonn" class="label"> </label></div>
+                          <div class="col-md-12"><label class="labels">Meslek:</label><br> <label id="meslekk" class="label"> </label></div>
+                          <div class="col-md-12"><label class="labels">Adres:</label><br> <label id="adress" class="label"> </label></div>
+                          <div class="col-md-12"><label class="labels">Şehir:</label><br> <label id="sehirr" class="label"> </label></div>
+                          <div class="col-md-12"><label class="labels">Mail:</label><br> <label id="maill" class="label"> </label></div>
                       </div>
                   </div>
               </div>
               <div class="col-md-4">
                   <div class="p-3 py-5">
                       <div class="d-flex justify-content-between align-items-center experience"><span>Sahip Olunan Arabalar</span></div><br>
-                      <div class="col-md-12"><label class="labels">Araba Markası:</label><br> <label class="label">Porche</label></div> <br>
-                      <div class="col-md-12"><label class="labels">Araba Modeli:</label><br> <label class="label">Taycan</label></div>
+                      <div class="col-md-12"><label class="labels">Araba Markası:</label><br> <label id="markaa" class="label"> </label></div> <br>
+                      <div class="col-md-12"><label class="labels">Araba Modeli:</label><br> <label id="modell" class="label"> </label></div>
                  
                   </div>
                   
@@ -179,5 +179,60 @@
     <script src="ProfilePage/js/jquery.min.js"></script>
     <script src="ProfilePage/js/main.js"></script>
     <script src="ProfilePage/js/popper.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    
+      // Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyBMoVqbGK9NLUCZDOVuZYqMQnC3wj6dAOM",
+          authDomain: "web-cozumleme-dersi-projesi.firebaseapp.com",
+          projectId: "web-cozumleme-dersi-projesi",
+          storageBucket: "web-cozumleme-dersi-projesi.appspot.com",
+          messagingSenderId: "555907940508",
+          appId: "1:555907940508:web:3205530253bcfc435f2d59"
+        };
+    
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const auth = getAuth();
+    
+      auth.onAuthStateChanged((user) => {
+    if (user) {
+    const userId = user.uid;
+    // Kullanıcı giriş yaptıysa 
+    onValue(ref(database, 'users/' + userId), (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          document.getElementById('isimm2').textContent = data.isim || '';
+          document.getElementById('isimm').textContent = data.isim || '';
+          document.getElementById('soyisimm').textContent = data.soyisim || '';
+          document.getElementById('telefonn').textContent = data.telefon || '';
+          document.getElementById('meslekk').textContent = data.meslek || '';
+          document.getElementById('adress').textContent = data.adres || '';
+          document.getElementById('sehirr').textContent = data.sehir || '';
+          document.getElementById('maill').textContent = data.mail || '';
+        }
+      });
+    
+      // Veritabanından kullanıcının sahip olduğu arabaların bilgilerini çekme
+      onValue(ref(database, 'users/' + userId + '/arabalar'), (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          document.getElementById('markaa').textContent = data.marka || '';
+          document.getElementById('modell').textContent = data.model || '';
+        }
+      });
+
+  } else {
+    alert('kullanıcı girişi olmamış, lütfen giriş yapın');
+  }
+});
+
+    
+    </script>
+    
   </body>
 </html>

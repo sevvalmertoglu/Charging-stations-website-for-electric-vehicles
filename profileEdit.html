@@ -79,7 +79,7 @@ h3 {
 			<nav id="sidebar">
 				<div class="p-4 pt-5">
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(ProfilePage/images/user.jpeg);"></a>
-          <h3 class="name" > Şevval Mertoğlu </h3>
+          <h3 class="name">Profil</h3>
 	        <ul class="list-unstyled components mb-5">
             <li class="active">
               <li>
@@ -146,25 +146,25 @@ h3 {
                             <h4 class="text-right">Profil Ayarları</h4>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">İsim</label><input type="text" class="form-control" placeholder="İsim" value=""></div>
-                            <div class="col-md-6"><label class="labels">Soyisim</label><input type="text" class="form-control" value="" placeholder="Soyisim"></div>
+                            <div class="col-md-6"><label class="labels">İsim</label><input type="text" id="isim" class="form-control" placeholder="İsim" value=""></div>
+                            <div class="col-md-6"><label class="labels">Soyisim</label><input type="text" id="soyisim" class="form-control" value="" placeholder="Soyisim"></div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Telefon Numarası</label><input type="text" class="form-control" placeholder="Telefon Numarası" value=""></div>
-                            <div class="col-md-12"><label class="labels">Meslek</label><input type="text" class="form-control" placeholder="Meslek" value=""></div>
-                            <div class="col-md-12"><label class="labels">Adres</label><input type="text" class="form-control" placeholder="Adres" value=""></div>
-                            <div class="col-md-12"><label class="labels">Şehir</label><input type="text" class="form-control" placeholder="Şehir" value=""></div>
-                            <div class="col-md-12"><label class="labels">Mail</label><input type="text" class="form-control" placeholder="Mail" value=""></div>
+                            <div class="col-md-12"><label class="labels">Telefon Numarası</label><input type="text" id="telefon" class="form-control" placeholder="Telefon Numarası" value=""></div>
+                            <div class="col-md-12"><label class="labels">Meslek</label><input type="text" id="meslek" class="form-control" placeholder="Meslek" value=""></div>
+                            <div class="col-md-12"><label class="labels">Adres</label><input type="text" id="adres" class="form-control" placeholder="Adres" value=""></div>
+                            <div class="col-md-12"><label class="labels">Şehir</label><input type="text" id="sehir" class="form-control" placeholder="Şehir" value=""></div>
+                            <div class="col-md-12"><label class="labels">Mail</label><input type="text" id="mail" class="form-control" placeholder="Mail" value=""></div>
                         </div>
-                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Profili Kaydet</button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" id="savedButton">Profili Kaydet</button></div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center experience"><span>Sahip Olunan Arabalar</span></div><br>
-                        <div class="col-md-12"><label class="labels">Araba Markası</label><input type="text" class="form-control" placeholder="Markası" value=""></div> <br>
-                        <div class="col-md-12"><label class="labels">Araba Modeli</label><input type="text" class="form-control" placeholder="Modeli" value=""></div>
-                        <div ><button class="button2" type="button">Arabayı Kaydet</button></div>
+                        <div class="col-md-12"><label class="labels">Araba Markası</label><input type="text" id="marka" class="form-control" placeholder="Markası" value=""></div> <br>
+                        <div class="col-md-12"><label class="labels">Araba Modeli</label><input type="text" id="model" class="form-control" placeholder="Modeli" value=""></div>
+                        <div ><button class="button2" type="button" id="carButton">Arabayı Kaydet</button></div>
                     </div>
                     
                 </div>
@@ -181,5 +181,77 @@ h3 {
     <script src="ProfilePage/js/jquery.min.js"></script>
     <script src="ProfilePage/js/main.js"></script>
     <script src="ProfilePage/js/popper.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+       // Firebase configuration
+       const firebaseConfig = {
+          apiKey: "AIzaSyBMoVqbGK9NLUCZDOVuZYqMQnC3wj6dAOM",
+          authDomain: "web-cozumleme-dersi-projesi.firebaseapp.com",
+          projectId: "web-cozumleme-dersi-projesi",
+          storageBucket: "web-cozumleme-dersi-projesi.appspot.com",
+          messagingSenderId: "555907940508",
+          appId: "1:555907940508:web:3205530253bcfc435f2d59"
+        };
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const auth = getAuth();
+
+// Profili Kaydet butonuna tıklandığında çalışacak fonksiyon
+  savedButton.addEventListener('click', (e) => {
+  // Kullanıcı bilgilerini input alanlarından al
+  var isim = document.getElementById('isim').value;
+  var soyisim = document.getElementById('soyisim').value;
+  var telefon = document.getElementById('telefon').value;
+  var meslek = document.getElementById('meslek').value;
+  var adres = document.getElementById('adres').value;
+  var sehir = document.getElementById('sehir').value;
+  var mail = document.getElementById('mail').value;
+
+  // Kullanıcı ID'si
+  const userId = auth.currentUser.uid;
+
+  // Veritabanında kullanıcı bilgilerini güncelle
+  set(ref(database, 'users/' + userId), {
+    isim: isim,
+    soyisim: soyisim,
+    telefon: telefon,
+    meslek: meslek,
+    adres: adres,
+    sehir: sehir,
+    mail: mail
+  }).then(() => {
+    alert('Profil başarıyla güncellendi!');
+  }).catch((error) => {
+    alert('Profil güncellenirken bir hata oluştu: ' + error.message);
+  });
+      alert('kaydedildi');
+
+});
+
+// Arabayı Kaydet butonuna tıklandığında çalışacak fonksiyon
+  carButton.addEventListener('click', (e) => {
+  // Araba bilgilerini input alanlarından al
+  var marka = document.getElementById('marka').value;
+  var model = document.getElementById('model').value;
+
+  const userId = auth.currentUser.uid;
+  // Veritabanında araba bilgilerini kullanıcı altında kaydet
+  set(ref(database, 'users/' + userId + '/arabalar'), {
+    marka: marka,
+    model: model
+  }).then(() => {
+    alert('Araba bilgileri başarıyla kaydedildi!');
+  }).catch((error) => {
+    alert('Araba bilgileri kaydedilirken bir hata oluştu: ' + error.message);
+  });
+});
+  
+    </script>
+ 
   </body>
 </html>
