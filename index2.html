@@ -24,11 +24,10 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>ya da mail adresinizle kayıt olun</span>
-                <input type="text" id="fullName" placeholder="İsim">
                 <input type="text" id="email" placeholder="Email">
                 <input type="password" id="password" placeholder="Şifre">
 
-                <input type="submit" id="signUp" name="Register" value="Register" />
+                <input type="submit" id="signUp" name="Register" value="Kayıt ol" />
                
                
             </form>
@@ -49,7 +48,7 @@
                 <input type="password" id="passwordd" placeholder="Şifre">
                 <a href="#">Şifrenizi mi unuttunuz?</a>
 
-                <input type="submit" id="signIn" name="signIn" value="Sign In" />
+                <input type="submit" id="signIn" name="signIn" value="Giriş Yap" />
                
             </form>
         </div>
@@ -99,7 +98,6 @@
       
         signUp.addEventListener('click',(e) => {
       
-          var fullName = document.getElementById('fullName').value;
           var email = document.getElementById('email').value;
           var password = document.getElementById('password').value;
       
@@ -109,12 +107,9 @@
           // Signed in 
           const user = userCredential.user;
           set(ref(database, 'users/' + user.uid), {
-        fullName: fullName,
         email: email
       })
-      .then(() => {
-        //alert('Kullanıcı veritabanına kaydedildi!');
-      })
+     
       .catch((error) => {
         alert('Veritabanına kaydetme hatası: ' + error.message);
       });
