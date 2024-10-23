@@ -81,14 +81,7 @@
         // https://firebase.google.com/docs/web/setup#available-libraries
       
         // Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyBMoVqbGK9NLUCZDOVuZYqMQnC3wj6dAOM",
-          authDomain: "web-cozumleme-dersi-projesi.firebaseapp.com",
-          projectId: "web-cozumleme-dersi-projesi",
-          storageBucket: "web-cozumleme-dersi-projesi.appspot.com",
-          messagingSenderId: "555907940508",
-          appId: "1:555907940508:web:3205530253bcfc435f2d59"
-        };
+        import { firebaseConfig } from './firebaseConfig.js';
       
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
